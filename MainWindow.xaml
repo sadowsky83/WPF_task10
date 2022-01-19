@@ -1,0 +1,44 @@
+﻿<Window x:Class="WPF_task10.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_task10"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="500" Width="500" Background="#FFC3C3C3">
+    <StackPanel>
+        <Border Margin="50" BorderBrush="White" BorderThickness="2" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Image Source="Data/pict.jpg" Width="200" Height="133" x:Name="myImage"/>
+            <Border.Effect>
+                <DropShadowEffect Color="Black" Direction="40" ShadowDepth="10" Opacity="0.5"/>
+            </Border.Effect>
+            <Border.RenderTransform>
+                <SkewTransform CenterX="-280" CenterY="0" AngleX="0" AngleY="10"/>
+            </Border.RenderTransform>
+        </Border>
+        <Border Width="200" Height="280">
+            <Border.Background>
+                <VisualBrush Visual="{Binding ElementName=myImage}">
+                    <VisualBrush.Transform>
+                        <ScaleTransform ScaleX="1" ScaleY="-1" CenterX="200" CenterY="150">
+                        </ScaleTransform>
+                    </VisualBrush.Transform>
+                </VisualBrush>
+            </Border.Background>
+            <Border.OpacityMask>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                    <GradientStop Offset="0" Color="Black"></GradientStop>
+                    <GradientStop Offset="0.6" Color="Transparent"></GradientStop>
+                </LinearGradientBrush>
+            </Border.OpacityMask>
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="1.03" ScaleY="1.085"/>
+                    <SkewTransform CenterY="20"  AngleX="-19.652"/>
+                    <RotateTransform Angle="10"/>
+                    <TranslateTransform X="1.155" Y="-5.29"/>
+                </TransformGroup>
+            </Border.RenderTransform>
+        </Border>
+    </StackPanel>
+</Window>
