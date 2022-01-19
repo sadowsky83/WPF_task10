@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF_task10"
         mc:Ignorable="d"
-        Title="MainWindow" Height="500" Width="500" Background="#FFC3C3C3">
+        Title="Picture" Height="500" Width="500" Background="#FFC3C3C3">
     <StackPanel>
         <Border Margin="50" BorderBrush="White" BorderThickness="2" HorizontalAlignment="Center" VerticalAlignment="Center">
             <Image Source="Data/pict.jpg" Width="200" Height="133" x:Name="myImage"/>
